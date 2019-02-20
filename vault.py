@@ -8,7 +8,7 @@ import os
 from uuid import uuid4
 import requests
 
-class VaultSDK():
+class MithVaultSDK():
     '''
 
         Ref: https://documenter.getpostman.com/view/4856913/RztrHRU9
@@ -55,7 +55,7 @@ class VaultSDK():
         a list of object, contains the balance amount, currency name and
         final updated.
 
-        >>> sdk = VaultSDK()
+        >>> sdk = MithVaultSDK()
         >>> info = sdk.getClientInformation()
         >>> assert info != []
         >>> assert 'currency'   in info[0]

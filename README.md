@@ -19,7 +19,7 @@ INSTALLATION
 
 USAGE
 ------------
-With your application CLIENT ID, CLIENT KEY and MINING KEY, create a `VaultSDK` instance
+With your application CLIENT ID, CLIENT KEY and MINING KEY, create a `MithVaultSDK` instance
 and your application can execute VAULT API. For example
 
 ```
@@ -28,7 +28,7 @@ CLIENT_SECRET = 'aefd2b59d780eb29bc95b6cf8f3503233ad702141b20f53c8a645afbb8c6616
 MINING_KEY = 'demo'
 AUTHORIZATION = '1668ff50dca1a85086b558e9e5abc521f14f2317712cb7725d8a9b0f670afe04ea61e091f1060e7845e16e55e300995cb79340782ce34ba683ec9e37e856ff95'
 
-sdk = vault.VaultSDK(CLIENT_ID, CLIENT_SECRET, MINING_KEY)
+sdk = vault.MithVaultSDK(CLIENT_ID, CLIENT_SECRET, MINING_KEY)
 activities = sdk.getUserMiningAction(AUTHORIZATION)
 ```
 

@@ -11,7 +11,7 @@ MINING_KEY = 'demo'
 AUTHORIZATION = '1668ff50dca1a85086b558e9e5abc521f14f2317712cb7725d8a9b0f670afe04ea61e091f1060e7845e16e55e300995cb79340782ce34ba683ec9e37e856ff95'
 
 def test_sdk():
-    sdk = vault.VaultSDK(CLIENT_ID, CLIENT_SECRET, MINING_KEY)
+    sdk = vault.MithVaultSDK(CLIENT_ID, CLIENT_SECRET, MINING_KEY)
 
     state = os.urandom(16).hex()
     bind_uri = sdk.getBindURI(state)
@@ -24,7 +24,7 @@ def test_sdk():
     assert 'updated_at' in info[0]
 
 def test_bind_user():
-    sdk = vault.VaultSDK(CLIENT_ID, CLIENT_SECRET, MINING_KEY)
+    sdk = vault.MithVaultSDK(CLIENT_ID, CLIENT_SECRET, MINING_KEY)
 
     info = sdk.getUserInformation(AUTHORIZATION)
     assert 500.0 >= info['balance'] >= 0.0
